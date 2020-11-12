@@ -1,0 +1,2 @@
+C:\Users\lacye\source\repos\24Hr_ChallengeAPI\24Hr_Challenge.WebAPI\obj\Debug\24Hr_Challenge.WebAPI.csprojAssemblyReference.cache
+C:\Users\lacye\source\repos\24Hr_ChallengeAPI\24Hr_Challenge.WebAPI\obj\Debug\24Hr_Challenge.WebAPI.csproj.CoreCompileInputs.cache
