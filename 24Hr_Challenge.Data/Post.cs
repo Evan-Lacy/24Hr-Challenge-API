@@ -17,6 +17,7 @@ namespace _24Hr_Challenge.Data
         [Required]
         public string Text { get; set; }
         public Guid Author { get; set; }
+        public DateTimeOffset CreatedUtc { get; set; }
 
         [Required]
         public int CommentId { get; set; }

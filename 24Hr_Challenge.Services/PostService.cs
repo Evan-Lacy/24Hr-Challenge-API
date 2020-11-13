@@ -1,4 +1,5 @@
 ﻿using _24Hr_Challenge.Data;
+using _24Hr_Challenge.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +34,7 @@ namespace _24Hr_Challenge.Services
                 Author = _author
             };
 
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 ctx.Posts.Add(entity);
                 return ctx.SaveChanges() == 1;
@@ -50,10 +51,8 @@ namespace _24Hr_Challenge.Services
                     .Select
                     (e => new PostListItem
                     {
-                        Id = e.Id,
+                        PostId = e.Id,
                         Title = e.Title,
-                        Text = e.Text,
-                        _author = e.Author
                     }
                     );
                 return query.ToArray();
@@ -68,12 +67,10 @@ namespace _24Hr_Challenge.Services
                 ctx.Posts.Single(e => e.Id == id && e.Author == _author);
                 return new PostDetail
                 {
-                    NoteId = entity.NoteId,
+                    PostId = entity.Id,
                     Title = entity.Title,
-                    Content = entity.Content,
-                    CategoryId = entity.CategoryId,
-                    CreatedUtc = entity.CreatedUtc,
-                    ModifiedUtc = entity.ModifiedUtc
+                    Text = entity.Text,
+                    CreatedUtc = entity.CreatedUtc
                 };
             }
         }
