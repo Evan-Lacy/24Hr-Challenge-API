@@ -12,6 +12,7 @@ namespace _24Hr_Challenge.WebAPI.Controllers
 {
     public class PostController : ApiController
     {
+        
         private PostService CreatePostService()
         {
             var author = Guid.Parse(User.Identity.GetUserId());
@@ -23,14 +24,14 @@ namespace _24Hr_Challenge.WebAPI.Controllers
         {
             PostService postService = CreatePostService();
             var posts = postService.GetPosts();
-            return Ok();//200
+            return Ok(posts);//200
         }
 
         public IHttpActionResult Get(int id)
         {
             PostService postService = CreatePostService();
             var posts = postService.GetPostById(id);
-            return Ok();//200
+            return Ok(posts);//200
         }
 
         public IHttpActionResult Post(PostCreate post)
@@ -47,7 +48,7 @@ namespace _24Hr_Challenge.WebAPI.Controllers
                 return InternalServerError();//500
             }
 
-            return Ok();
+            return Ok();//200
         }
     }
 }
