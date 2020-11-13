@@ -27,10 +27,10 @@ namespace _24Hr_Challenge.WebAPI.Controllers
             return Ok(comments);
         }
 
-        public IHttpActionResult Get(Post postId)
+        public IHttpActionResult Get([FromUri]int id)
         {
             CommentService commentService = CreateCommentService();
-            var comments = commentService.GetCommentByPostId(postId);
+            List<CommentList> comments = commentService.GetCommentByPostId(id);
             return Ok(comments);
         }
 
