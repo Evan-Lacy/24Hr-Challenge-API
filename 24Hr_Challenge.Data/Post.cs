@@ -20,6 +20,10 @@ namespace _24Hr_Challenge.Data
         public DateTimeOffset CreatedUtc { get; set; }
 
         //public string Comment { get; set; }
+        public virtual List<Comment> Comments { get; set; } = new List<Comment>();
+
+
+
 
         //public int CommentId { get; set; }
         //[ForeignKey(nameof(CommentId))]
