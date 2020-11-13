@@ -70,6 +70,7 @@ namespace _24Hr_Challenge.Services
                     PostId = entity.Id,
                     Title = entity.Title,
                     Text = entity.Text,
+                    Comment = entity.Comments,
                     CreatedUtc = entity.CreatedUtc
                 };
             }

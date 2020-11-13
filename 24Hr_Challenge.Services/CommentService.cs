@@ -28,6 +28,7 @@ namespace _24Hr_Challenge.Services
         {
             var entity = new Comment()
             {
+                PostId = comment.PostId,
                 Id = _commentId,
                 Text = comment.Text,
                 Author = _author
@@ -58,17 +59,21 @@ namespace _24Hr_Challenge.Services
             }
         }
 
-        public CommentDetail GetCommentByPostId(Post id)
+        public List<CommentList> GetCommentByPostId(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
-                ctx.Comments.Single(e => e.Post == id && e.Author == _author);
-                return new CommentDetail
+                ctx.Comments.Where(e => e.PostId == id)
+                .Select
+                (elif => new CommentList
                 {
-                    Id = entity.Id,
-                    Text = entity.Text
-                };
+                    Id = elif.Id,
+                    Text = elif.Text
+                }
+                    
+                ).ToList();
+                return entity;
             }
         }
     }
