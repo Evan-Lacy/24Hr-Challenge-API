@@ -55,7 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommentCreate.cs" />
+    <Compile Include="CommentDetail.cs" />
     <Compile Include="CommentList.cs" />
+    <Compile Include="LikeCreate.cs" />
     <Compile Include="PostCreate.cs" />
     <Compile Include="PostDetail.cs" />
     <Compile Include="PostListItem.cs" />
@@ -65,6 +67,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\24Hr_Challenge.Data\24Hr_Challenge.Data.csproj">
+      <Project>{A03149DD-CD09-4413-BC29-C926DDEF7E49}</Project>
+      <Name>24Hr_Challenge.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
 ﻿using _24Hr_Challenge.Data;
+using _24Hr_Challenge.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -66,6 +66,10 @@
       <Project>{A03149DD-CD09-4413-BC29-C926DDEF7E49}</Project>
       <Name>24Hr_Challenge.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\24Hr_Challenge.Models\24Hr_Challenge.Models.csproj">
+      <Project>{39AF0946-A94A-4B35-BC29-9D8EBB2391C9}</Project>
+      <Name>24Hr_Challenge.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
