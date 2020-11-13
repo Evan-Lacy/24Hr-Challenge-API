@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using _24Hr_Challenge.Data;
+using _24Hr_Challenge.Models;
+using _24Hr_Challenge.Services;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,11 +27,28 @@ namespace _24Hr_Challenge.WebAPI.Controllers
             return Ok(comments);
         }
 
-        public IHttpActionResult Get(int postId)
+        public IHttpActionResult Get(Post postId)
         {
             CommentService commentService = CreateCommentService();
             var comments = commentService.GetCommentByPostId(postId);
             return Ok(comments);
+        }
+
+        public IHttpActionResult Post(CommentCreate comment)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var service = CreateCommentService();
+
+            if (!service.CreateComment(comment))
+            {
+                return InternalServerError();
+            }
+
+            return Ok();
         }
     }
 }

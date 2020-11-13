@@ -17,11 +17,8 @@ namespace _24Hr_Challenge.Data
         [Required]
         public Guid Author { get; set; }
 
-        [Required]
         [ForeignKey(nameof(Post))]
-
         public int PostId { get; set; }
-        [ForeignKey(nameof(Post))]
         public virtual Post Post { get; set; }
     }
 }
