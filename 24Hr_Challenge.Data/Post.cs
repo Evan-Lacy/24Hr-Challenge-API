@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace _24Hr_Challenge.Data
 {
     public class Post
-    {   
+    {
         [Key]
         public int Id { get; set; }
         [Required]
@@ -17,11 +17,13 @@ namespace _24Hr_Challenge.Data
         [Required]
         public string Text { get; set; }
         public Guid Author { get; set; }
+        public DateTimeOffset CreatedUtc { get; set; }
 
-        [Required]
-        public int CommentId { get; set; }
-        [ForeignKey(nameof(CommentId))]
-        public virtual Comment Comment { get; set; }
-        
+        //public string Comment { get; set; }
+
+        //public int CommentId { get; set; }
+        //[ForeignKey(nameof(CommentId))]
+        //public virtual Comment CommentProp { get; set; }
+
     }
 }

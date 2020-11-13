@@ -14,3 +14,9 @@ C:\Users\lacye\source\repos\24Hr_ChallengeAPI\24Hr_Challenge.Services\obj\Debug\
 C:\Users\lacye\source\repos\24Hr_ChallengeAPI\24Hr_Challenge.Services\obj\Debug\24Hr_Challenge.Services.csproj.CopyComplete
 C:\Users\lacye\source\repos\24Hr_ChallengeAPI\24Hr_Challenge.Services\obj\Debug\24Hr_Challenge.Services.dll
 C:\Users\lacye\source\repos\24Hr_ChallengeAPI\24Hr_Challenge.Services\obj\Debug\24Hr_Challenge.Services.pdb
+C:\Users\lacye\source\repos\24Hr_ChallengeAPI\24Hr_Challenge.Services\bin\Debug\24Hr_Challenge.Data.dll
+C:\Users\lacye\source\repos\24Hr_ChallengeAPI\24Hr_Challenge.Services\bin\Debug\24Hr_Challenge.Models.dll
+C:\Users\lacye\source\repos\24Hr_ChallengeAPI\24Hr_Challenge.Services\bin\Debug\24Hr_Challenge.Data.pdb
+C:\Users\lacye\source\repos\24Hr_ChallengeAPI\24Hr_Challenge.Services\bin\Debug\24Hr_Challenge.Data.dll.config
+C:\Users\lacye\source\repos\24Hr_ChallengeAPI\24Hr_Challenge.Services\bin\Debug\24Hr_Challenge.Models.pdb
+C:\Users\lacye\source\repos\24Hr_ChallengeAPI\24Hr_Challenge.Services\bin\Debug\24Hr_Challenge.Models.dll.config
