@@ -35,6 +35,8 @@ namespace _24Hr_Challenge.Data
 
         public DbSet<Post> Posts { get; set; }
 
+        public DbSet<Comment> Comments { get; set; }
+
         
         
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
